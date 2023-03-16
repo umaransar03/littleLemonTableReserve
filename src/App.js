@@ -2,10 +2,10 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      hello jan.jdnn
-    </div>
-  );
+    <>
+      push
+    </>
+    );
 }
 
 export default App;
