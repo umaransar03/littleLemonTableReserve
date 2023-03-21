@@ -1,10 +1,11 @@
-import './App.css';
+import { Navabr } from "./screens/Navabr";
+
 
 function App() {
   return (
-    <>
-      push
-    </>
+    <div>
+      <Navabr/>
+    </div>
     );
 }
 
