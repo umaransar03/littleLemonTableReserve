@@ -8,7 +8,8 @@ export const Home = () => {
     <div>
         <Navabr/>
         <main className='main'>
-            <section className='topSection'>
+            <div className='topSection'>
+                <div className='top'>
                 <div className='shortIntro'>
                     <h2>
                         Little Lemon
@@ -23,7 +24,8 @@ export const Home = () => {
                     <button className='table'>Reserve a Table</button>
                 </div>
                 <img src={mainPhoto} alt="" width={300} height={400}></img>
-            </section>
+                </div>
+            </div>
             <section className='topSection'>
                 
             </section>
