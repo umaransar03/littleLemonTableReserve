@@ -89,7 +89,7 @@
 .menuu {
     display: flex;
     flex-direction: row;
-    margin: 150px 100px 100px 150px;
+    margin: 150px 100px 50px 150px;
     justify-content: space-between;
     align-items: left;
 }
@@ -97,11 +97,11 @@
 .menuu h1 {
     font-size: 60px;
     font-weight: 600;
+    margin-top: 25px;
 }
-
 .menuu button {
     width: 15%;
-    margin-top: 10px;
+    margin-top: 20px;
     height: 50px;
     background-color: #F4CE14;
     border-radius: 25px;
@@ -115,7 +115,12 @@
     transition: 0.2s;
     -webkit-text-fill-color: #FFFFFF;
 }
+.Cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
+}
 @media screen and (max-width: 1148px) {
     .shortIntro h2 {
         font-size: 40px;
@@ -136,8 +141,18 @@
     .shortIntro {
         margin-left: 80px;
     }
-
+    .menuu {
+        margin: 150px 100px 100px 80px;
+    }
     .topSection img {
         display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .menuu button{
+        display: none;
+    }
+    .menuu h1{
+        font-size: 45px;
     }
 }

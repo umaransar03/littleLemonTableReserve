@@ -2,6 +2,8 @@ import React from 'react'
 import './Home.css'
 import { Navabr } from '../Navabr';
 import mainPhoto from '../images/1.jpg';
+import { Card } from './Card';
+import { Items } from '../items/Items';
 
 export const Home = () => {
     return (
@@ -38,7 +40,17 @@ export const Home = () => {
                     <button>Menu</button>
                 </div>
             </div>
-            
+            <div className='Cards'>
+                {Items.map(project => (
+                    <Card
+                        key={project.title}
+                        Name={project.title}
+                        description={project.description}
+                        imgSrc={project.getImageSrc()}
+                    />
+                ))}
+            </div>
+
         </div>
     )
 }
