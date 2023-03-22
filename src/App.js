@@ -1,10 +1,12 @@
-import { Navabr } from "./screens/Navabr";
+import { Home } from "./screens/Home/Home";
+
 
 
 function App() {
   return (
     <div>
-      <Navabr/>
+      {/* <Navabr/> */}
+      <Home/>
     </div>
     );
 }

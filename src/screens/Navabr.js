@@ -1,7 +1,6 @@
 import React from 'react'
-import logo from '../images/logo_header.png';
+import logo from './images/logo_header.png';
 import './Navbar.css';
-import MenuIcon from '@mui/icons-material/Menu';
 
 export const Navabr = () => {
     return (
@@ -13,7 +12,6 @@ export const Navabr = () => {
             </div>
             
             <nav class="nav">
-                {/* <div className='hamburger' ><MenuIcon /></div> */}
                 <input type="checkbox" className='toggle-menu'/>
                 <div className='hamburger'></div>
                 <ul className='menu'>
