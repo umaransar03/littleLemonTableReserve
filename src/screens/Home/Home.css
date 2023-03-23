@@ -150,6 +150,9 @@
     .menuu {
         margin: 20px 100px 20px 80px;
     }
+    .menuu button{
+        width: 20%;
+    }
     .topSection img {
         display: none;
     }
