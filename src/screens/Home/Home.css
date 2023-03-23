@@ -89,15 +89,16 @@
 .menuu {
     display: flex;
     flex-direction: row;
-    margin: 150px 100px 50px 150px;
+    margin: 150px 100px 20px 150px;
     justify-content: space-between;
-    align-items: left;
+    align-items: center;
 }
 
 .menuu h1 {
     font-size: 60px;
     font-weight: 600;
-    margin-top: 25px;
+    margin-top: 20px;
+    text-align: center;
 }
 .menuu button {
     width: 15%;
@@ -115,10 +116,15 @@
     transition: 0.2s;
     -webkit-text-fill-color: #FFFFFF;
 }
+.cardsMain{
+    align-items: center;
+    justify-content: center;
+}
 .Cards{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 
 }
 @media screen and (max-width: 1148px) {
@@ -142,17 +148,33 @@
         margin-left: 80px;
     }
     .menuu {
-        margin: 150px 100px 100px 80px;
+        margin: 20px 100px 20px 80px;
     }
     .topSection img {
         display: none;
     }
 }
 @media screen and (max-width: 768px) {
+    .menuu{
+        justify-content: center;
+    }
     .menuu button{
         display: none;
     }
     .menuu h1{
         font-size: 45px;
+    }
+    .Cards{
+        flex-direction: column;
+    }
+    .table {
+        width: 140px;
+        font-size: 14px;
+    }
+    .shortIntro h5{
+        font-size: 16px;
+    }
+    .shortIntro {
+        margin: 250px 30px 30px 30px;
     }
 }

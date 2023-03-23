@@ -25,5 +25,15 @@ export const Items = [
         up of pure vegetables
         straight from the farm.`,
         getImageSrc: () => require("../images/3.jpg"),
+    },
+    {
+        id: 3,
+        title: "Greek Salad",
+        description:
+            `Our Salad is made
+        up of pure vegetables
+        straight from the farm.`,
+        getImageSrc: () => require("../images/4.jpg"),
     }
+    
 ]

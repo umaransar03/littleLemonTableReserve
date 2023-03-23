@@ -40,17 +40,18 @@ export const Home = () => {
                     <button>Menu</button>
                 </div>
             </div>
-            <div className='Cards'>
-                {Items.map(project => (
-                    <Card
-                        key={project.title}
-                        Name={project.title}
-                        description={project.description}
-                        imgSrc={project.getImageSrc()}
-                    />
-                ))}
+            <div className='cardsMain'>
+                <div className='Cards'>
+                    {Items.map(project => (
+                        <Card
+                            key={project.title}
+                            Name={project.title}
+                            description={project.description}
+                            imgSrc={project.getImageSrc()}
+                        />
+                    ))}
+                </div>
             </div>
-
         </div>
     )
 }
