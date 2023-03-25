@@ -29,9 +29,6 @@ export const Home = () => {
                             <img src={mainPhoto} alt="" width={300} height={400}></img>
                         </div>
                     </div>
-                    <section className='topSection'>
-
-                    </section>
                 </main>
             </div>
             <div>

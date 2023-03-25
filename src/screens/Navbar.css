@@ -9,7 +9,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 25px;  
-    /* background-color: grey; */
 }
 .logo-header{
     align-items: center;
@@ -64,12 +63,14 @@
 }
 .menuItems{
     color: black;
+    transition: 0.3s;
 }
 .menuItems:hover {
     box-shadow: 0 -2px 0 rgb(0, 0, 0) inset,
     500px 0 0 rgba(255, 255, 255, 0.05) inset;
     transition: 0.3s;
     border-radius: 8px;
+    margin: 10px;
 }
 .logIn:hover {
     background-color: #333333;
