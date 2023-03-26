@@ -68,8 +68,10 @@ export default function Userinput() {
                             <DatePicker
                                 label='Select Date'
                                 sx={{mb:2}}
+                                required
                             />
                             <TimePicker 
+                                required
                                 label='What Time?'
                             />
                         </Stack>
@@ -77,7 +79,7 @@ export default function Userinput() {
                             type="submit"
                             fullWidth
                             variant="contained"
-                            sx={{ mt: 3, mb: 2, backgroundColor: '#495E57', }}
+                            sx={{ mt: 3, mb: 2, backgroundColor: '#495E57', ":hover": {bgcolor: '#333333'}}}
                         >
                             Submit
                         </Button>
