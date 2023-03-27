@@ -5,22 +5,28 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useForm } from 'react-hook-form';
 import { DatePicker, TimePicker } from '@mui/x-date-pickers';
-import { Stack } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import './UserInput.css'
 
 
 const theme = createTheme();
 
 export default function Userinput() {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
+
+    const { register, handleSubmit, formState: { errors } } = useForm();
+
+    const handleRegistration = (e) => {
+        const data = new FormData(e.currentTarget)
         console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
+            name: data.get('name'),
+            phone: data.get('phone'),
+            date: data.get('date'),
+            time: data.get('time')
+        })
     };
+    const handleError = (errors) => { };
 
     return (
         <ThemeProvider theme={theme}>
@@ -32,21 +38,26 @@ export default function Userinput() {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        
+
                     }}
                 >
-                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+                    <Box component="form" onSubmit={handleSubmit(handleRegistration, handleError)} sx={{ mt: 1 }}>
                         <TextField
                             margin="normal"
                             required
                             fullWidth
                             name="yourName"
                             label="Your Name"
-                            type="yourName"
+                            {...register("name", { required: "Name is required" })}
+                            error={Boolean(errors.name)}
+                            helperText={errors.name?.message}
                             id="yourName"
                             autoComplete=""
                             autoFocus
                         />
+                        <Typography variant='p' sx={{ color: 'error.main' }}>
+                            {errors?.name && errors.name.message}
+                        </Typography>
                         <TextField
                             margin="normal"
                             fullWidth
@@ -59,27 +70,34 @@ export default function Userinput() {
                             margin="normal"
                             required
                             fullWidth
+                            name="phoneNumber"
                             id="phoneNumber"
                             label="Phone Number"
-                            name="phoneNumber"
-                            autoComplete="phoneNumber"
+                            {...register("phone", {
+                                required: "Phone is required",
+                                pattern: {
+                                    value: /^[0-9]{10}$/,
+                                    message: "Invalid Phone Number"
+                                }
+                            })}
+                            error={Boolean(errors.phone)}
+                            helperText={errors.phone?.message}
                         />
                         <Stack>
                             <DatePicker
-                                label='Select Date'
-                                sx={{mb:2}}
-                                required
+                                label="Select a date"
+                                sx={{mt:2}}
                             />
-                            <TimePicker 
-                                required
-                                label='What Time?'
+                            <TimePicker
+                                label="Select a time"
+                                sx={{mt:2}}
                             />
                         </Stack>
                         <Button
                             type="submit"
                             fullWidth
                             variant="contained"
-                            sx={{ mt: 3, mb: 2, backgroundColor: '#495E57', ":hover": {bgcolor: '#333333'}}}
+                            sx={{ mt: 3, mb: 2, backgroundColor: '#495E57', ":hover": { bgcolor: '#333333' } }}
                         >
                             Submit
                         </Button>

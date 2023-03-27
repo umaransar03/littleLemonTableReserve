@@ -52,8 +52,8 @@ export const ReserveTable = () => {
                 <div className='note'>
                     <h1>Stress-Free Bookings</h1>
                     <h3>
-                        Reserve your table hassle-free! Little Lemon never charges 
-                        extra fees for reservations. Book your spot now and enjoy a 
+                        Reserve your table hassle-free! Little Lemon never charges
+                        extra fees for reservations. Book your spot now and enjoy a
                         transparent dining experience.
                     </h3>
                 </div>
