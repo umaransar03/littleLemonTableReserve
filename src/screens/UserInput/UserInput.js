@@ -53,7 +53,6 @@ export default function Userinput() {
                             helperText={errors.name?.message}
                             id="yourName"
                             autoComplete=""
-                            autoFocus
                         />
                         <Typography variant='p' sx={{ color: 'error.main' }}>
                             {errors?.name && errors.name.message}
