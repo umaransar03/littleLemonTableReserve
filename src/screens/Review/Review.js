@@ -60,6 +60,7 @@ export const Review = () => {
                         onClick={handleBooked}
                         sx={{
                             my: 4,
+                            mx: 1.2,
                             float: 'right',
                             bgcolor: '#495E57',
                             ":hover": { bgcolor: '#333333' }
