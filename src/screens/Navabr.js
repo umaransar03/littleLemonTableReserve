@@ -21,6 +21,9 @@ export const Navabr = () => {
     const handleBook = () => {
         navigate('/reserveTable')
     };
+    const handleMenu = () => {
+        navigate('/menu')
+    };
     const handleHome = () => {
         navigate('/')
     };
@@ -38,7 +41,7 @@ export const Navabr = () => {
                 <div className='hamburger'></div>
                 <ul className='menu'>
                     <li><a className='menuItems' onClick={handleHome}>Home</a></li>
-                    <li><a className='menuItems' href="#">Menu</a></li>
+                    <li><a className='menuItems' onClick={handleMenu}>Menu</a></li>
                     <li><a className='menuItems' onClick={handleBook}>Book</a></li>
                     <li>
                         <a className='menuItems' onClick={handleClickOpen}>About</a>

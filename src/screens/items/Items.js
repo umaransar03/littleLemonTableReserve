@@ -10,29 +10,28 @@ export const Items = [
     },
     {
         id: 2,
-        title: "Greek Salad",
+        title: "Brushetta",
         description:
-            `Our Salad is made
-        up of pure vegetables
-        straight from the farm.`,
+            `Our Brushetta is made from
+            grilled bread that has been smeared with garlic`,
         getImageSrc: () => require("../images/2.jpg"),
     },
     {
         id: 3,
-        title: "Greek Salad",
+        title: "Grilled Fish",
         description:
-            `Our Salad is made
-        up of pure vegetables
-        straight from the farm.`,
+            `Our grilled fish is perfectly 
+            cooked and seasoned fillet 
+            that's both healthy and flavorful.`,
         getImageSrc: () => require("../images/3.jpg"),
     },
     {
         id: 3,
-        title: "Greek Salad",
+        title: "Lemon Chicken",
         description:
-            `Our Salad is made
-        up of pure vegetables
-        straight from the farm.`,
+            `Our Lemon Chicken is a deliciously
+            flavorful dish, featuring
+            tender chicken breast. `,
         getImageSrc: () => require("../images/4.jpg"),
     }
     

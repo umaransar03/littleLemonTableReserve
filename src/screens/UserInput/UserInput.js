@@ -7,8 +7,10 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useForm } from 'react-hook-form';
 import { DatePicker, TimePicker } from '@mui/x-date-pickers';
+import { useNavigate } from 'react-router-dom';
 import { Stack, Typography } from '@mui/material';
 import './UserInput.css'
+import { useGeneralContext } from '../Context/GeneralContext';
 
 
 const theme = createTheme();
@@ -16,6 +18,10 @@ const theme = createTheme();
 export default function Userinput() {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
+
+    const { setName, setPhone, setEmail, date, setDate, setTime} = useGeneralContext();
+
+    const navigate = useNavigate();
 
     const handleRegistration = (e) => {
         const data = new FormData(e.currentTarget)
@@ -25,8 +31,10 @@ export default function Userinput() {
             date: data.get('date'),
             time: data.get('time')
         })
+        navigate('/review')
     };
     const handleError = (errors) => { };
+    console.log(date)
 
     return (
         <ThemeProvider theme={theme}>
@@ -51,17 +59,16 @@ export default function Userinput() {
                             {...register("name", { required: "Name is required" })}
                             error={Boolean(errors.name)}
                             helperText={errors.name?.message}
+                            onChange={(event) => {setName(event.target.value)}}
                             id="yourName"
                             autoComplete=""
                         />
-                        <Typography variant='p' sx={{ color: 'error.main' }}>
-                            {errors?.name && errors.name.message}
-                        </Typography>
                         <TextField
                             margin="normal"
                             fullWidth
                             id="email"
                             label="Email Address"
+                            onChange={(e) => {setEmail(e.target.value)}}
                             name="email"
                             autoComplete="email"
                         />
@@ -81,15 +88,18 @@ export default function Userinput() {
                             })}
                             error={Boolean(errors.phone)}
                             helperText={errors.phone?.message}
+                            onChange={(e) => {setPhone(e.target.value)}}
                         />
                         <Stack>
                             <DatePicker
                                 label="Select a date"
                                 sx={{mt:2}}
+                                onChange={(e) => {setDate(e)}}
                             />
                             <TimePicker
                                 label="Select a time"
                                 sx={{mt:2}}
+                                onChange={(e) => {setTime(e)}}
                             />
                         </Stack>
                         <Button

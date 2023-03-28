@@ -2,7 +2,7 @@ import React from 'react'
 import './Home.css'
 import { Navabr } from '../Navabr';
 import mainPhoto from '../images/1.jpg';
-import { Card } from './Card';
+import { Card } from '../MenuCard/Card';
 import { Items } from '../items/Items';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,8 +12,10 @@ export const Home = () => {
 
     const handleBook = () => {
         navigate('/reserveTable')
-    }
-
+    };
+    const handleMenu = () => {
+        navigate('/menu')
+    };
 
     return (
         <div>
@@ -43,7 +45,7 @@ export const Home = () => {
             <div>
                 <div className='menuu'>
                     <h1>Specials</h1>
-                    <button>Menu</button>
+                    <button onClick={handleMenu}>Menu</button>
                 </div>
             </div>
             <div className='cardsMain'>
