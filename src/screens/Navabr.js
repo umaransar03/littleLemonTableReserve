@@ -50,8 +50,7 @@ export const Navabr = () => {
                             handleClose={handleClose}
                         />
                     </li>
-
-                    <li><a className='logIn' href="#">Log In</a></li>
+                    <li><a className='logIn'>Log In</a></li>
                 </ul>
                 <ul className='log'>
                     

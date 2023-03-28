@@ -8,7 +8,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useForm } from 'react-hook-form';
 import { DatePicker, TimePicker } from '@mui/x-date-pickers';
 import { useNavigate } from 'react-router-dom';
-import { Stack, Typography } from '@mui/material';
+import { Stack } from '@mui/material';
 import './UserInput.css'
 import { useGeneralContext } from '../Context/GeneralContext';
 

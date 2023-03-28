@@ -5,7 +5,6 @@ import Userinput from '../UserInput/UserInput';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import './ReserveTable.css';
-import { Button, Box } from '@mui/material';
 
 function Copyright(props) {
     return (
@@ -24,15 +23,6 @@ function Copyright(props) {
 
 export const ReserveTable = () => {
 
-    const [activeStep, setActiveStep] = React.useState(0);
-
-    const handleNext = () => {
-        setActiveStep(activeStep + 1);
-    };
-
-    const handleBack = () => {
-        setActiveStep(activeStep - 1);
-    };
 
     return (
         <div>
